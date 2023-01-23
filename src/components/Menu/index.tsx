@@ -1,5 +1,5 @@
 import SocialMedia from '../SocialMedia';
-import StyledH2 from '../StyledH2';
+import StyledSubTitle from '../StyledSubTitle';
 import { MenuMobileProps } from '../MenuBurger';
 
 import github from '../../assets/images/svg/social/logo-github.svg';
@@ -15,9 +15,9 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
   return (
     <StyledMenu open={open}>
       <div className="navigation-list">
-        <StyledH2>
+        <StyledSubTitle>
           redes sociais
-        </StyledH2>
+        </StyledSubTitle>
 
         <ul className="nav-social-list">
           <SocialMedia
@@ -51,9 +51,9 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
       </div>
 
       <div className="navigation-list">
-        <StyledH2>
+        <StyledSubTitle>
           Menu
-        </StyledH2>
+        </StyledSubTitle>
 
         <ul className="nav-menu-list">
           <li>

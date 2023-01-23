@@ -9,6 +9,7 @@ export const StyledMenu = styled.nav<{open: boolean}>`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 
   background: ${({ theme }) => theme.colors.blue[800]};
 

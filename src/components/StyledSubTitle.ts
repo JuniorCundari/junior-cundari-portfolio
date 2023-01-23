@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-export default styled.h2`
+export default styled.div`
   font-weight: 700;
   font-size: 4.8rem;
   text-transform: lowercase;
-  padding-bottom: 3.2rem;
 
   background: linear-gradient(${({ theme }) => theme.colors.gradient});
   -webkit-background-clip: text;

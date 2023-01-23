@@ -6,6 +6,7 @@ import About from '../About';
 
 import Header from '../Header';
 import Home from '../Home';
+import Projects from '../Projects';
 
 import { Container } from './styles';
 
@@ -18,6 +19,7 @@ function App() {
       <Container>
         <Home />
         <About />
+        <Projects />
       </Container>
     </ThemeProvider>
   );
