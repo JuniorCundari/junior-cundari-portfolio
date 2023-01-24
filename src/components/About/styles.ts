@@ -11,7 +11,6 @@ export const Container = styled.section`
   .text-about {
     p {
       font-family: 'Alice';
-      width: 80%;
     }
   }
 

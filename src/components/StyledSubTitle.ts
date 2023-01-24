@@ -6,8 +6,22 @@ export default styled.div`
   text-transform: lowercase;
 
   background: linear-gradient(${({ theme }) => theme.colors.gradient});
+  background-clip: text;
+  background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+
+  animation: gradient 3s ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 `;

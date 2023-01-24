@@ -2,7 +2,7 @@ import Project from '../Project';
 import StyledSubTitle from '../StyledSubTitle';
 import { Container } from './styles';
 
-export default function Projects() {
+export default function SectionProjects() {
   return (
     <Container>
       <div className="projects-section-title">
@@ -10,7 +10,7 @@ export default function Projects() {
           <h2>Projetos</h2>
         </StyledSubTitle>
 
-        <p>Aqui você pode ver alguns dos meus projetos, pessoais e de estudos!</p>
+        <p>Aqui você pode ver alguns dos meus projetos pessoais e de estudos!</p>
       </div>
 
       <Project />

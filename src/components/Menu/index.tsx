@@ -16,7 +16,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
     <StyledMenu open={open}>
       <div className="navigation-list">
         <StyledSubTitle>
-          redes sociais
+          <h3>redes sociais</h3>
         </StyledSubTitle>
 
         <ul className="nav-social-list">
@@ -25,6 +25,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
             href="https://github.com/JuniorCundari"
             alt="Logo Github"
             name="Github"
+            fill
           />
 
           <SocialMedia
@@ -32,6 +33,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
             href="https://www.linkedin.com/in/juniorcundari/"
             alt="Logo Linkedin"
             name="LinkedIn"
+            fill
           />
 
           <SocialMedia
@@ -39,6 +41,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
             href="https://api.whatsapp.com/send?phone=5511971906481"
             alt="Logo Whatsapp"
             name="Whatsapp"
+            fill
           />
 
           <SocialMedia
@@ -46,13 +49,14 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
             href="https://www.linkedin.com/in/juniorcundari/"
             alt="Logo Email"
             name="E-mail"
+            fill
           />
         </ul>
       </div>
 
       <div className="navigation-list">
         <StyledSubTitle>
-          Menu
+          <h3>Menu</h3>
         </StyledSubTitle>
 
         <ul className="nav-menu-list">

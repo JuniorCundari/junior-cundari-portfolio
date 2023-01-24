@@ -3,21 +3,22 @@ import styled from 'styled-components';
 // import background from '../../assets/images/img/background.png';
 
 export const Container = styled.section`
-  margin-top: 19.8rem;
+  margin-top: 20%;
   /* background-image: url();
   object-fit: cover;
   background-size: cover; */
 
   h1 {
-    font-size: 8rem;
-    width: 80%;
+    letter-spacing: -0.03em;
 
-    span {
+    .span-title {
       background: linear-gradient(${({ theme }) => theme.colors.gradient});
+      background-clip: text;
+      background-size: 400% 400%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+
+      animation: gradient 3s ease infinite;
     }
   }
 
@@ -27,15 +28,16 @@ export const Container = styled.section`
     justify-content: center;
 
     margin-top: 6.4rem;
+    padding: 2.4rem 4rem;
     background: ${({ theme }) => theme.colors.blue[800]};
-    width: 26rem;
-    height: 7.2rem;
+    width: clamp(16.2rem, 49vw, 26.2rem);
+    height: clamp(4.4rem, 5vw, 7.2rem);
     border-radius: 2rem;
 
     a {
       text-transform: uppercase;
       font-family: 'Fira Sans';
-      font-size: 2rem;
+      white-space: nowrap;
     }
   }
 
@@ -46,5 +48,17 @@ export const Container = styled.section`
     gap: 2.4rem;
 
     margin-top: 16.8rem;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 `;

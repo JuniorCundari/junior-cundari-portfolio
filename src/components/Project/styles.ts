@@ -4,11 +4,51 @@ export const Container = styled.section`
   position: relative;
   margin-top: 8.8rem;
 
-  .banner {
+  .disp {
     width: 30rem;
-    height: 38rem;
+    height: 35rem;
+    position: relative;
     border-radius: 2rem;
-    object-fit: cover;
+    overflow: hidden;
+
+    canvas {
+      object-fit: cover;
+      position: absolute;
+      z-index: 10;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .banner {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &:hover {
+        &:nth-child(2) {
+          opacity: 1;
+        }
+      }
+
+      &:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+    }
   }
 
   .project-infos {
@@ -17,17 +57,31 @@ export const Container = styled.section`
     justify-content: space-around;
 
     position: absolute;
-    z-index: -1;
-    top: 20%;
-    left: 59%;
-    transform: translateX(-50%);
+    left: 18%;
+    bottom: 25%;
+    z-index: 20;
 
-    padding: 0 4rem;
+    mix-blend-mode: difference;
+    transform: translateX(-2rem);
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: 1.3s var(--cubicbz);
 
-    width: 58.6rem;
-    height: 24rem;
-    background: ${({ theme }) => theme.colors.blue[800]};
-    border-radius: 2rem;
+    &:hover {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    @media only screen and (max-width: 65.625em) {
+      top: 95%;
+      left: 15.6%;
+      width: clamp(32rem, 5vw, 58.6rem);
+    }
+
+    @media only screen and (max-width: 24.375em) {
+      top: 95%;
+      left: 45.5%;
+    }
 
     .project-title {
       div {
@@ -63,6 +117,13 @@ export const Container = styled.section`
         display: flex;
         align-items: center;
         gap: 1.6rem;
+
+        a {
+          img {
+            width: clamp(2.4rem, 5vw, 3.2rem);
+            height: clamp(2.4rem, 5vw, 3.2rem);
+          }
+        }
       }
     }
   }

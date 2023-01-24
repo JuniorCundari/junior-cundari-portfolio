@@ -7,10 +7,18 @@ export const Container = styled.div`
   padding: 0.9rem 1.6rem;
   gap: 1.6rem;
 
+  height: clamp(4rem, 5vw, 4.8rem);
+
   background: ${({ theme }) => theme.colors.blue[800]};
   border-radius: 2rem;
 
+  img {
+    width: clamp(2.4rem, 5vw, 3.2rem);
+    height: clamp(2.2rem, 5vw, 3rem);
+  }
+
   span {
     word-break: keep-all;
+    white-space: nowrap;
   }
 `;

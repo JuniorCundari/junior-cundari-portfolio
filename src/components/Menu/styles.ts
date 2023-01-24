@@ -21,6 +21,12 @@ export const StyledMenu = styled.nav<{open: boolean}>`
   transition: transform 0.9s ease-in-out;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
 
+  @media only screen and (max-width: 56.25em) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+  }
+
   .navigation-list {
     display: flex;
     flex-direction: column;
@@ -44,7 +50,6 @@ export const StyledMenu = styled.nav<{open: boolean}>`
 
       li {
         a {
-          font-size: 2.4rem;
           font-weight: bold;
           font-family: 'Fira Sans', sans-serif;
 
@@ -58,6 +63,10 @@ export const StyledMenu = styled.nav<{open: boolean}>`
           }
         }
       }
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      width: 60%;
     }
   }
 `;

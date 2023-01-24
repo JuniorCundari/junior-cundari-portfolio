@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledBurger = styled.button<{ open: boolean }>`
   position: fixed;
-  top: 4.8rem;
+  top: 4.2%;
   right: 25%;
   z-index: 10;
 
@@ -16,11 +16,18 @@ export const StyledBurger = styled.button<{ open: boolean }>`
   border-radius: 50%;
   border: none;
   background: transparent;
-  padding-left: 01rem;
+  padding-left: ${({ open }) => (open ? '1rem' : '0')};
   background: ${({ theme }) => theme.colors.background};
+
+  transition: all 0.4s linear;
 
   &:focus {
     outline: none;
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    top: 5.5%;
+    right: 10%;
   }
 
   div {
@@ -37,7 +44,7 @@ export const StyledBurger = styled.button<{ open: boolean }>`
     }
 
     &:nth-child(2) {
-      width: 80%;
+      width: 70%;
       height: 0.2rem;
       border-radius: 0.3rem;
       background: ${({ theme }) => theme.colors.green};

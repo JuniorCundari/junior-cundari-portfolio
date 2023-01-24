@@ -7,12 +7,12 @@ export const Container = styled.header`
 
   margin: 4.8rem auto 0 auto;
   max-width: 105.6rem;
-  padding: 0 4.8rem;
+  padding: 0 3.2rem;
 
   overflow: hidden;
 
   .logo {
-    width: 10.0rem;
-    height: 4.1rem;
+    width: clamp(6.8rem, 5vw, 10.2rem);
+    height: clamp(2.4rem, 5vw, 3.6rem);
   }
 `;

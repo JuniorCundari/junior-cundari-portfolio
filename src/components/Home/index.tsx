@@ -13,7 +13,7 @@ export default function Home() {
       <h1>
         buscar a melhor solução para o seu
         {' '}
-        <span>produto</span>
+        <span className="span-title">produto</span>
         {' '}
         é o que me motiva.
       </h1>
