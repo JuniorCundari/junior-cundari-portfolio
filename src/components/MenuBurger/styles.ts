@@ -25,9 +25,13 @@ export const StyledBurger = styled.button<{ open: boolean }>`
     outline: none;
   }
 
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 80em) {
     top: 5.5%;
     right: 10%;
+  }
+
+  @media only screen and (max-width: 20em) {
+    top: 8%;
   }
 
   div {

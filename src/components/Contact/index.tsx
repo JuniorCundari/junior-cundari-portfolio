@@ -35,28 +35,28 @@ export default function Contact() {
             icon={github}
             href="https://github.com/JuniorCundari"
             alt="Logo Github"
-            fill
+            colorSvg
           />
 
           <SocialMedia
             icon={linkedin}
             href="https://www.linkedin.com/in/juniorcundari/"
             alt="Logo Linkedin"
-            fill
+            colorSvg
           />
 
           <SocialMedia
             icon={whatsapp}
             href="https://api.whatsapp.com/send?phone=5511971906481"
             alt="Logo Whatsapp"
-            fill
+            colorSvg
           />
 
           <SocialMedia
             icon={mail}
             href="https://www.linkedin.com/in/juniorcundari/"
             alt="Logo Email"
-            fill
+            colorSvg
           />
         </ul>
       </div>

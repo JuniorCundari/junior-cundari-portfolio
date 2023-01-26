@@ -1,34 +1,66 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
   margin-top: 8.8rem;
+  width: 80%;
 
-  .disp {
-    width: 30rem;
-    height: 35rem;
+  background: linear-gradient(180deg, rgba(32, 31, 36, 0.69) 0%, rgba(48, 46, 55, 0) 100%);
+  border: 2px solid ${({ theme }) => theme.colors.blue[800]};
+  border-radius: 6rem;
+
+  .project-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 0 4rem;
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
+
+    span {
+      font-size: 4rem;
+      letter-spacing: -0.11em;
+      color: transparent;
+      -webkit-text-stroke: 2px ${({ theme }) => theme.colors.white};
+    }
+  }
+
+  .wrapper {
+    width: clamp(20rem, 70vw, 30rem);
+    height: clamp(25rem, 100vw, 35rem);;
     position: relative;
-    border-radius: 2rem;
-    overflow: hidden;
 
     canvas {
       object-fit: cover;
       position: absolute;
-      z-index: 10;
       width: 100% !important;
       height: 100% !important;
+      border-radius: 2rem;
+
+      background: linear-gradient(180deg, rgba(32, 31, 36, 0.69) 0%, rgba(48, 46, 55, 0) 100%);
+      border: 2px solid ${({ theme }) => theme.colors.blue[800]};
+      border-radius: 6rem;
+      padding: 1.6rem;
     }
 
     .banner {
       display: none;
-      position: absolute;
+      /* position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      left: 0; */
+      /* width: 100%;
+      height: 100%; */
       object-fit: cover;
 
-      &:hover {
+      /* &:hover {
         &:nth-child(2) {
           opacity: 1;
         }
@@ -47,83 +79,55 @@ export const Container = styled.section`
         left: 0;
         opacity: 0;
         transition: opacity 0.3s;
+      } */
+    }
+  }
+
+  .project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 0 4rem;
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
+
+    span {
+      display: block;
+      font-family: 'Alice', sans-serif;
+    }
+
+    a {
+      img {
+        width: clamp(2.4rem, 5vw, 3.2rem);
+        height: clamp(2.4rem, 5vw, 3.2rem);
       }
     }
   }
 
-  .project-infos {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  @media only screen and (max-width: 29.375em) {
+    width: 100%;
 
-    position: absolute;
-    left: 18%;
-    bottom: 25%;
-    z-index: 20;
-
-    mix-blend-mode: difference;
-    transform: translateX(-2rem);
-    opacity: 0;
-    will-change: transform, opacity;
-    transition: 1.3s var(--cubicbz);
-
-    &:hover {
-      transform: translateX(0);
-      opacity: 1;
-    }
-
-    @media only screen and (max-width: 65.625em) {
-      top: 95%;
-      left: 15.6%;
-      width: clamp(32rem, 5vw, 58.6rem);
-    }
-
-    @media only screen and (max-width: 24.375em) {
-      top: 95%;
-      left: 45.5%;
-    }
-
-    .project-title {
-      div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 1.6rem;
-
-        .project-number {
-          font-size: 2rem;
-          font-family: 'Fira Sans', sans-serif;
-          letter-spacing: -0.15rem;
-        }
-      }
-
-      p {
-        font-family: 'Alice', sans-serif;
-      }
-    }
-
-    .project-infos-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
+    .project-footer {
       span {
-        display: block;
-        font-family: 'Alice', sans-serif;
-        font-size: 1.6rem;
+        font-size: 1rem;
       }
+    }
+  }
 
-      .project-social {
-        display: flex;
-        align-items: center;
-        gap: 1.6rem;
+  @media only screen and (max-width: 20em) {
+    .project-title {
+      justify-content: center;
 
-        a {
-          img {
-            width: clamp(2.4rem, 5vw, 3.2rem);
-            height: clamp(2.4rem, 5vw, 3.2rem);
-          }
-        }
+      h3 {
+        display: none;
+      }
+    }
+
+    .project-footer {
+      span {
+        opacity: 0;
       }
     }
   }

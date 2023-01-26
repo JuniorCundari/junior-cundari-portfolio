@@ -14,7 +14,7 @@ import { Container } from './styles';
 
 export default function Project() {
   useEffect(() => {
-    Array.from(document.querySelectorAll('.disp')).forEach((element: any) => {
+    Array.from(document.querySelectorAll('.wrapper')).forEach((element: any) => {
       const imgs: any = Array.from(element.querySelectorAll('img'));
       new HoverEffect({
         parent: element,
@@ -28,8 +28,13 @@ export default function Project() {
 
   return (
     <Container>
+      <div className="project-title">
+        <span className="project-number">01.</span>
+        <h3>Empire Burger</h3>
+      </div>
+
       <div
-        className="disp"
+        className="wrapper"
         data-displacement={displacement}
       >
         <img
@@ -44,27 +49,16 @@ export default function Project() {
         />
       </div>
 
-      <div className="project-infos">
-        <div className="project-title">
-          <StyledSubTitle>
-            <h3>Empire Burger</h3>
-            <span className="project-number">#01</span>
-          </StyledSubTitle>
-          <p>Landing page de uma hamburgueria fictícia!</p>
-        </div>
-        <div className="project-infos-footer">
-          <span>
-            TypeScript, ReactJS, Styled Components
-          </span>
-          <div className="project-social">
-            <a href="https://github.com/JuniorCundari" target="_blank" rel="noreferrer">
-              <img src={logoGitHub2} alt="Logo github" />
-            </a>
-            <a href="#sdasd">
-              <img src={openSite} alt="Ícone para abrir site do projeto" />
-            </a>
-          </div>
-        </div>
+      <div className="project-footer">
+        <a href="https://github.com/JuniorCundari" target="_blank" rel="noreferrer">
+          <img src={logoGitHub2} alt="Logo github" />
+        </a>
+        <span>
+          TypeScript, ReactJS, Styled Components
+        </span>
+        <a href="#sdasd">
+          <img src={openSite} alt="Ícone para abrir site do projeto" />
+        </a>
       </div>
     </Container>
   );

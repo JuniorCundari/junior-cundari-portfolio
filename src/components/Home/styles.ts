@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
-// import background from '../../assets/images/img/background.png';
+import background from '../../assets/images/img/background.png';
 
 export const Container = styled.section`
   margin-top: 20%;
-  /* background-image: url();
-  object-fit: cover;
-  background-size: cover; */
+  background-image: url(${background});
 
   h1 {
     letter-spacing: -0.03em;
@@ -32,7 +30,7 @@ export const Container = styled.section`
     background: ${({ theme }) => theme.colors.blue[800]};
     width: clamp(16.2rem, 49vw, 26.2rem);
     height: clamp(4.4rem, 5vw, 7.2rem);
-    border-radius: 2rem;
+    border-radius: 1.6rem;
 
     a {
       text-transform: uppercase;

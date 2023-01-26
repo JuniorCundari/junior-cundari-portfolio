@@ -66,6 +66,7 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.colors.background};
     font-family: 'Ubuntu Mono', sans-serif;
     font-size: 1.6rem;
+    line-height: 1.6;
     position: relative;
     width: 100%;
     height: 100%;

@@ -25,7 +25,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
             href="https://github.com/JuniorCundari"
             alt="Logo Github"
             name="Github"
-            fill
+            colorSvg
           />
 
           <SocialMedia
@@ -33,7 +33,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
             href="https://www.linkedin.com/in/juniorcundari/"
             alt="Logo Linkedin"
             name="LinkedIn"
-            fill
+            colorSvg
           />
 
           <SocialMedia
@@ -41,7 +41,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
             href="https://api.whatsapp.com/send?phone=5511971906481"
             alt="Logo Whatsapp"
             name="Whatsapp"
-            fill
+            colorSvg
           />
 
           <SocialMedia
@@ -49,7 +49,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
             href="https://www.linkedin.com/in/juniorcundari/"
             alt="Logo Email"
             name="E-mail"
-            fill
+            colorSvg
           />
         </ul>
       </div>

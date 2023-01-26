@@ -11,12 +11,9 @@ export const Container = styled.footer`
   align-items: center;
   justify-content: space-between;
 
-  /* border-top: 2px solid;
-  border-image: linear-gradient(${({ theme }) => theme.colors.gradient}) 1 0 0 0; */
-
   img {
-    width: clamp(6.8rem, 5vw, 10.2rem);
-    height: clamp(2.4rem, 5vw, 3.6rem);
+    width: clamp(6.8rem, 2vw, 10.2rem);
+    height: clamp(2.4rem, 2vw, 3.6rem);
   }
 
   ul {
