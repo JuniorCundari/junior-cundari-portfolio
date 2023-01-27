@@ -19,8 +19,8 @@ export const Container = styled.li<{ colorSvg: boolean }>`
 
     img {
       filter: ${({ colorSvg }) => (colorSvg ? 'brightness(0) saturate(100%) invert(100%) sepia(29%) saturate(5077%) hue-rotate(178deg) brightness(107%) contrast(109%)' : false)};
-      width: clamp(3.2rem, 5vw, 4.8rem);
-      height: clamp(3.2rem, 5vw, 4.8rem);
+      width: clamp(3.2rem, 5vw, 4rem);
+      height: clamp(3.2rem, 5vw, 4rem);
     }
   }
 `;

@@ -1,16 +1,82 @@
 /* eslint-disable no-new */
 import { useEffect } from 'react';
 import HoverEffect from 'hover-effect';
-import StyledSubTitle from '../StyledSubTitle';
 
+import displacement from '../../assets/images/img/displacement.webp';
 import bannerEmpireBurger from '../../assets/images/img/banner-empire-burger.webp';
 import bannerEmpireBurger2 from '../../assets/images/img/banner-empire-burger-2.webp';
-import displacement from '../../assets/images/img/displacement.webp';
+import bannerNlwCopa from '../../assets/images/img/banner-nlw-copa.webp';
+import bannerNlwCopa2 from '../../assets/images/img/banner-nlw-copa2.webp';
+import bannerNlwEsports from '../../assets/images/img/banner-nlw-esports.webp';
+import bannerNlwEsports2 from '../../assets/images/img/banner-nlw-esports2.webp';
+import bannerRocketCard from '../../assets/images/img/banner-rocket-card.webp';
+import bannerRocketCard2 from '../../assets/images/img/banner-rocket-card-2.webp';
+import bannerSocialTree from '../../assets/images/img/banner-social-tree.webp';
+import bannerSocialTree2 from '../../assets/images/img/banner-social-tree-2.webp';
 
 import logoGitHub2 from '../../assets/images/svg/social/logo-github2.svg';
 import openSite from '../../assets/images/svg/icons/open.svg';
 
 import { Container } from './styles';
+
+const projects = [
+  {
+    id: 1,
+    number: '01',
+    title: 'Empire Burger',
+    languages: 'TypeScript, ReactJS, Styled Components',
+    repository: 'https://github.com/JuniorCundari/br-challenges-empire-burger',
+    webSite: 'https://br-challenges-empire-burger-pearl.vercel.app/',
+    banner: {
+      1: bannerEmpireBurger,
+      2: bannerEmpireBurger2,
+    },
+  },
+  {
+    id: 2,
+    number: '02',
+    title: 'NLW Copa',
+    languages: 'TypeScript, ReactJS, NodeJS',
+    banner: {
+      1: bannerNlwCopa,
+      2: bannerNlwCopa2,
+    },
+  },
+  {
+    id: 3,
+    number: '03',
+    title: 'NLW eSports',
+    languages: 'TypeScript, ReactJS, NodeJS',
+    banner: {
+      1: bannerNlwEsports,
+      2: bannerNlwEsports2,
+    },
+  },
+  {
+    id: 4,
+    number: '04',
+    title: 'Rocket Card',
+    languages: 'ReactJS, Styled Components',
+    repository: 'https://github.com/JuniorCundari/rocket-card-github',
+    webSite: 'https://rocket-card-github.vercel.app/',
+    banner: {
+      1: bannerRocketCard,
+      2: bannerRocketCard2,
+    },
+  },
+  {
+    id: 5,
+    number: '05',
+    title: 'Social Tree',
+    languages: 'HTML5, CSS3',
+    repository: 'https://github.com/JuniorCundari/desafio-social-tree-rocketseat-discover',
+    webSite: 'https://juniorcundari.github.io/desafio-social-tree-rocketseat-discover/',
+    banner: {
+      1: bannerSocialTree,
+      2: bannerSocialTree2,
+    },
+  },
+];
 
 export default function Project() {
   useEffect(() => {
@@ -27,39 +93,53 @@ export default function Project() {
   }, []);
 
   return (
-    <Container>
-      <div className="project-title">
-        <span className="project-number">01.</span>
-        <h3>Empire Burger</h3>
-      </div>
+    <>
+      {projects.map((project) => (
+        <Container key={project.id} projectWebSite={project.webSite ? '0' : '1'}>
+          <div className="project-title">
+            <span className="project-number">{`${project.number}.`}</span>
+            <h3>{project.title}</h3>
+          </div>
 
-      <div
-        className="wrapper"
-        data-displacement={displacement}
-      >
-        <img
-          src={bannerEmpireBurger}
-          alt="Banner Empire Burger"
-          className="banner"
-        />
-        <img
-          src={bannerEmpireBurger2}
-          alt="Banner Empire Burger"
-          className="banner"
-        />
-      </div>
+          <div
+            className="wrapper"
+            data-displacement={displacement}
+          >
+            <img
+              src={project.banner[1]}
+              alt={`Banner ${project.title}`}
+              className="banner"
+            />
+            <img
+              src={project.banner[2]}
+              alt={`Banner ${project.title}`}
+              className="banner"
+            />
+          </div>
 
-      <div className="project-footer">
-        <a href="https://github.com/JuniorCundari" target="_blank" rel="noreferrer">
-          <img src={logoGitHub2} alt="Logo github" />
-        </a>
-        <span>
-          TypeScript, ReactJS, Styled Components
-        </span>
-        <a href="#sdasd">
-          <img src={openSite} alt="Ícone para abrir site do projeto" />
-        </a>
-      </div>
-    </Container>
+          <div className="project-footer">
+            <a
+              href={project.repository}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={logoGitHub2} alt="Logo github" />
+            </a>
+            <span>
+              {project.languages}
+            </span>
+            {project.webSite && (
+              <a
+                href={project.webSite}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={openSite} alt="Ícone para abrir o site do projeto" />
+              </a>
+            )}
+          </div>
+        </Container>
+      ))}
+    </>
   );
 }

@@ -9,7 +9,7 @@ import { Container } from './styles';
 
 export default function Home() {
   return (
-    <Container>
+    <Container id="anchor-home">
       <h1>
         buscar a melhor solução para o seu
         {' '}
@@ -45,7 +45,7 @@ export default function Home() {
 
         <SocialMedia
           icon={mail}
-          href="https://www.linkedin.com/in/juniorcundari/"
+          href="mailto:jrcundari@yahoo.com.br"
           alt="Logo Email"
         />
       </ul>

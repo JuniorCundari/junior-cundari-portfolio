@@ -1,5 +1,5 @@
 import SocialMedia from '../SocialMedia';
-import StyledSubTitle from '../StyledSubTitle';
+import Gradient from '../Gradient';
 
 import github from '../../assets/images/svg/social/logo-github.svg';
 import linkedin from '../../assets/images/svg/social/logo-linkedin.svg';
@@ -10,25 +10,26 @@ import { Container } from './styles';
 
 export default function Contact() {
   return (
-    <Container>
+    <Container id="anchor-contact">
       <div>
-        <StyledSubTitle>
+        <Gradient>
           <h2>
             Gostou do meu trabalho?
           </h2>
           <h2>
             Ou acha que posso fazer parte da sua equipe?
           </h2>
-        </StyledSubTitle>
+        </Gradient>
         <p>
-          Me envie um e-mail ou me chame no whatsapp, ficarei muito feliz com seu contato! 😀
+          Envie um e-mail para jrcundari@yahoo.com.br ou me chame no whatsapp,
+          ficarei muito feliz com seu contato! 😀
         </p>
       </div>
 
       <div className="contact-social">
-        <StyledSubTitle>
+        <Gradient>
           <h3>Me adicione nas redes sociais!</h3>
-        </StyledSubTitle>
+        </Gradient>
 
         <ul>
           <SocialMedia
@@ -54,7 +55,7 @@ export default function Contact() {
 
           <SocialMedia
             icon={mail}
-            href="https://www.linkedin.com/in/juniorcundari/"
+            href="mailto:jrcundari@yahoo.com.br"
             alt="Logo Email"
             colorSvg
           />

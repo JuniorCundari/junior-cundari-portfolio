@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.section<{ projectWebSite: string}>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,33 +53,7 @@ export const Container = styled.section`
 
     .banner {
       display: none;
-      /* position: absolute;
-      top: 0;
-      left: 0; */
-      /* width: 100%;
-      height: 100%; */
       object-fit: cover;
-
-      /* &:hover {
-        &:nth-child(2) {
-          opacity: 1;
-        }
-      }
-
-      &:nth-child(1) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      &:nth-child(2) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s;
-      } */
     }
   }
 
@@ -127,7 +101,7 @@ export const Container = styled.section`
 
     .project-footer {
       span {
-        opacity: 0;
+        opacity: ${({ projectWebSite }) => projectWebSite};
       }
     }
   }

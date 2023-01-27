@@ -1,14 +1,14 @@
 import Project from '../Project';
-import StyledSubTitle from '../StyledSubTitle';
+import Gradient from '../Gradient';
 import { Container } from './styles';
 
 export default function SectionProjects() {
   return (
-    <Container>
+    <Container id="anchor-projects">
       <div className="projects-section-title">
-        <StyledSubTitle>
+        <Gradient>
           <h2>Projetos</h2>
-        </StyledSubTitle>
+        </Gradient>
 
         <p>Aqui você pode ver alguns dos meus projetos pessoais e de estudos!</p>
       </div>

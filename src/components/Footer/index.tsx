@@ -37,7 +37,7 @@ export default function Footer() {
 
           <SocialMedia
             icon={mail}
-            href="https://www.linkedin.com/in/juniorcundari/"
+            href="mailto:jrcundari@yahoo.com.br"
             alt="Logo Email"
           />
         </ul>

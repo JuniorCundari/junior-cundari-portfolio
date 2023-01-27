@@ -6,7 +6,7 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
 
-  margin-top: 10.2rem;
+  padding-top: 10.2rem;
 
   .text-about {
     p {

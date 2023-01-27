@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export default styled.div`
   font-weight: 700;
   font-size: 4.8rem;
-  text-transform: lowercase;
 
   background: linear-gradient(${({ theme }) => theme.colors.gradient});
   background-clip: text;

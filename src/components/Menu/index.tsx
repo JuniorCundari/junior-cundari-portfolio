@@ -1,5 +1,5 @@
 import SocialMedia from '../SocialMedia';
-import StyledSubTitle from '../StyledSubTitle';
+import Gradient from '../Gradient';
 import { MenuMobileProps } from '../MenuBurger';
 
 import github from '../../assets/images/svg/social/logo-github.svg';
@@ -15,9 +15,9 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
   return (
     <StyledMenu open={open}>
       <div className="navigation-list">
-        <StyledSubTitle>
+        <Gradient>
           <h3>redes sociais</h3>
-        </StyledSubTitle>
+        </Gradient>
 
         <ul className="nav-social-list">
           <SocialMedia
@@ -46,7 +46,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
 
           <SocialMedia
             icon={mail}
-            href="https://www.linkedin.com/in/juniorcundari/"
+            href="mailto:jrcundari@yahoo.com.br"
             alt="Logo Email"
             name="E-mail"
             colorSvg
@@ -55,9 +55,9 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
       </div>
 
       <div className="navigation-list">
-        <StyledSubTitle>
+        <Gradient>
           <h3>Menu</h3>
-        </StyledSubTitle>
+        </Gradient>
 
         <ul className="nav-menu-list">
           <li>
