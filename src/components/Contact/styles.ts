@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  height: 100vh;
   margin-top: 18.8rem;
   margin-bottom: 29.4rem;
 

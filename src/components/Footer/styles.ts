@@ -6,10 +6,14 @@ export const Container = styled.footer`
   padding: 0 3.2rem;
 
   height: 15rem;
+  width: 100vw;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  border-top: 0.1rem solid;
+  border-image: linear-gradient(${({ theme }) => theme.colors.gradient}) 1 0 0 0;
 
   img {
     width: clamp(6.8rem, 2vw, 10.2rem);
@@ -27,10 +31,4 @@ export const Container = styled.footer`
       }
     }
   }
-`;
-
-export const StyledBorderTop = styled.div`
-  width: 100%;
-  height: 0.2rem;
-  background-image: linear-gradient(${({ theme }) => theme.colors.gradient});
 `;

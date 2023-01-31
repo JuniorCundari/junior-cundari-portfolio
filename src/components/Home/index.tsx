@@ -9,7 +9,10 @@ import { Container } from './styles';
 
 export default function Home() {
   return (
-    <Container id="anchor-home">
+    <Container
+      id="anchor-home"
+      data-scroll-section
+    >
       <h1>
         buscar a melhor solução para o seu
         {' '}
@@ -24,7 +27,12 @@ export default function Home() {
         </a>
       </div>
 
-      <ul>
+      <ul
+        className=" op-class"
+        data-scroll
+        data-scroll-direction="horizontal"
+        data-scroll-speed="2"
+      >
         <SocialMedia
           icon={github}
           href="https://github.com/JuniorCundari"

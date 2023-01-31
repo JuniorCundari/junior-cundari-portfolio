@@ -11,8 +11,10 @@
   "dependencies": {
     "eslint-import-resolver-typescript": "^3.5.3",
     "hover-effect": "^1.1.0",
+    "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-locomotive-scroll": "^0.2.2",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

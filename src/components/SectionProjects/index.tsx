@@ -4,7 +4,7 @@ import { Container } from './styles';
 
 export default function SectionProjects() {
   return (
-    <Container id="anchor-projects">
+    <Container id="anchor-projects" data-scroll-section>
       <div className="projects-section-title">
         <Gradient>
           <h2>Projetos</h2>

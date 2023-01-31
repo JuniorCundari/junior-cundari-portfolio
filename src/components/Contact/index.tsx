@@ -10,7 +10,7 @@ import { Container } from './styles';
 
 export default function Contact() {
   return (
-    <Container id="anchor-contact">
+    <Container id="anchor-contact" data-scroll-section>
       <div>
         <Gradient>
           <h2>

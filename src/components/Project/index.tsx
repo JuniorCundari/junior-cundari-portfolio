@@ -89,13 +89,18 @@ export default function Project() {
         image2: imgs[1].getAttribute('src'),
         displacementImage: element.dataset.displacement,
       });
+
+      console.clear();
     });
   }, []);
 
   return (
     <>
       {projects.map((project) => (
-        <Container key={project.id} projectWebSite={project.webSite ? '0' : '1'}>
+        <Container
+          key={project.id}
+          projectWebSite={project.webSite ? '0' : '1'}
+        >
           <div className="project-title">
             <span className="project-number">{`${project.number}.`}</span>
             <h3>{project.title}</h3>

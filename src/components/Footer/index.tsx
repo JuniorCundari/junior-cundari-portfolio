@@ -6,42 +6,38 @@ import linkedin from '../../assets/images/svg/social/logo-linkedin.svg';
 import whatsapp from '../../assets/images/svg/social/logo-whatsapp.svg';
 import mail from '../../assets/images/svg/social/logo-mail.svg';
 
-import { Container, StyledBorderTop } from './styles';
+import { Container } from './styles';
 
 export default function Footer() {
   return (
-    <>
-      <StyledBorderTop />
+    <Container data-scroll-section>
+      <img src={logo} alt="" />
 
-      <Container>
-        <img src={logo} alt="" />
+      <ul>
+        <SocialMedia
+          icon={github}
+          href="https://github.com/JuniorCundari"
+          alt="Logo Github"
+        />
 
-        <ul>
-          <SocialMedia
-            icon={github}
-            href="https://github.com/JuniorCundari"
-            alt="Logo Github"
-          />
+        <SocialMedia
+          icon={linkedin}
+          href="https://www.linkedin.com/in/juniorcundari/"
+          alt="Logo Linkedin"
+        />
 
-          <SocialMedia
-            icon={linkedin}
-            href="https://www.linkedin.com/in/juniorcundari/"
-            alt="Logo Linkedin"
-          />
+        <SocialMedia
+          icon={whatsapp}
+          href="https://api.whatsapp.com/send?phone=5511971906481"
+          alt="Logo Whatsapp"
+        />
 
-          <SocialMedia
-            icon={whatsapp}
-            href="https://api.whatsapp.com/send?phone=5511971906481"
-            alt="Logo Whatsapp"
-          />
-
-          <SocialMedia
-            icon={mail}
-            href="mailto:jrcundari@yahoo.com.br"
-            alt="Logo Email"
-          />
-        </ul>
-      </Container>
-    </>
+        <SocialMedia
+          icon={mail}
+          href="mailto:jrcundari@yahoo.com.br"
+          alt="Logo Email"
+        />
+      </ul>
+    </Container>
   );
 }

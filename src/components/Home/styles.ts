@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import background from '../../assets/images/img/background.png';
 
 export const Container = styled.section`
+  height: 100vh;
+  width: 100%;
   margin-top: 20%;
   background-image: url(${background});
 
@@ -46,6 +48,15 @@ export const Container = styled.section`
     gap: 2.4rem;
 
     margin-top: 16.8rem;
+
+    /* .op-class{
+      opacity: 0;
+    }
+
+    .fadeIn {
+      opacity: 1;
+      transition: opacity 4s ;
+    } */
   }
 
   @keyframes gradient {
