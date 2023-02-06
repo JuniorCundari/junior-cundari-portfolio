@@ -11,8 +11,10 @@ export const Container = styled.header`
 
   overflow: hidden;
 
+  height: 100%;
+  width: 100%;
+
   .logo {
     width: clamp(6.8rem, 5vw, 10.2rem);
-    height: clamp(2.4rem, 5vw, 3.6rem);
   }
 `;

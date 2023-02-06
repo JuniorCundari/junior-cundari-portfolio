@@ -5,6 +5,8 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
 
+  position: relative;
+
   margin-top: 11.2rem;
 
   .projects-section-title {
@@ -15,5 +17,13 @@ export const Container = styled.section`
     p {
       font-family: 'Alice', sans-serif;
     }
+  }
+
+  .wrapper-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
   }
 `;

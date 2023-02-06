@@ -53,7 +53,6 @@ export default createGlobalStyle`
     --max: 2rem;
   }
 
-
   html {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -68,6 +67,8 @@ export default createGlobalStyle`
     font-size: 1.6rem;
     line-height: 1.6;
     position: relative;
+    width: 100vw;
+    height: 100vh;
   }
 
   button {
@@ -82,7 +83,6 @@ export default createGlobalStyle`
   li {
     list-style: none;
   }
-
 
   html.has-scroll-smooth {
     overflow: hidden;

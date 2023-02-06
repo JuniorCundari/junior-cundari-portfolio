@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  margin: 0 auto;
-  max-width: 105.6rem;
+  /* margin: 0 auto;
+  max-width: 105.6rem; */
   padding: 0 3.2rem;
 
   height: 15rem;
@@ -10,7 +10,7 @@ export const Container = styled.footer`
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   border-top: 0.1rem solid;
   border-image: linear-gradient(${({ theme }) => theme.colors.gradient}) 1 0 0 0;

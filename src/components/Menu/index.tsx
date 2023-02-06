@@ -63,6 +63,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
           <li>
             <a
               href="#anchor-home"
+              data-scroll-to
               onClick={() => close()}
             >
               Home
@@ -71,6 +72,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
           <li>
             <a
               href="#anchor-about"
+              data-scroll-to
               onClick={() => close()}
             >
               Sobre
@@ -79,6 +81,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
           <li>
             <a
               href="#anchor-projects"
+              data-scroll-to
               onClick={() => close()}
             >
               Projetos
@@ -87,6 +90,7 @@ export default function Menu({ open, setOpen }: MenuMobileProps) {
           <li>
             <a
               href="#anchor-contact"
+              data-scroll-to
               onClick={() => close()}
             >
               Contato

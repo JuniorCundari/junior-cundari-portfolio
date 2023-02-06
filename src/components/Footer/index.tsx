@@ -10,8 +10,8 @@ import { Container } from './styles';
 
 export default function Footer() {
   return (
-    <Container data-scroll-section>
-      <img src={logo} alt="" />
+    <Container>
+      <img src={logo} alt="logo" />
 
       <ul>
         <SocialMedia

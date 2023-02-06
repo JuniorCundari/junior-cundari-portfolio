@@ -14,7 +14,7 @@ import sass from '../../assets/images/svg/languages/logo-sass.svg';
 
 export default function About() {
   return (
-    <Container id="anchor-about" data-scroll-section>
+    <Container id="anchor-about">
       <div className="text-about">
         <p>
           Olá, seja bem-vindo(a), meu nome é José Roberto, mas pode me chamar de Junior Cundari 😀,
@@ -53,16 +53,6 @@ export default function About() {
             alt="logo javascript"
             name="JavaScript"
           />
-          <Language
-            icon={javascript}
-            alt="logo javascript"
-            name="JavaScript"
-          />
-          <Language
-            icon={javascript}
-            alt="logo javascript"
-            name="JavaScript"
-          />
         </div>
 
         <div className="languages-box">
@@ -84,16 +74,6 @@ export default function About() {
             name="CSS3"
           />
 
-          <Language
-            icon={sass}
-            alt="logo sass"
-            name="Sass"
-          />
-          <Language
-            icon={sass}
-            alt="logo sass"
-            name="Sass"
-          />
           <Language
             icon={sass}
             alt="logo sass"
