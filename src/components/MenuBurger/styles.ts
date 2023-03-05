@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const StyledBurger = styled.button<{ open: boolean }>`
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 4.8rem;
+  right: 15%;
   z-index: 10;
 
   display: flex;
@@ -17,22 +17,22 @@ export const StyledBurger = styled.button<{ open: boolean }>`
   border: none;
   background: transparent;
   padding-left: ${({ open }) => (open ? '1rem' : '0')};
-  background: ${({ theme }) => theme.colors.background};
+  transition: padding-left 0.4s linear;
 
-  transition: all 0.4s linear;
+  background: ${({ theme }) => theme.colors.background};
 
   &:focus {
     outline: none;
   }
 
-  /* @media only screen and (max-width: 80em) {
+  @media only screen and (max-width: 80em) {
     top: 5.5%;
     right: 10%;
   }
 
   @media only screen and (max-width: 20em) {
     top: 8%;
-  } */
+  }
 
   div {
     transition: all 0.4s linear;

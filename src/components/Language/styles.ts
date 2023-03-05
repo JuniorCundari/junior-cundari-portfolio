@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 0.9rem 1.6rem;
   gap: 1.6rem;
+  margin-right: 3.2rem;
 
   height: clamp(4rem, 5vw, 4.8rem);
 
@@ -15,7 +16,7 @@ export const Container = styled.div`
 
   img {
     width: clamp(2.4rem, 5vw, 3.2rem);
-    height: clamp(2.2rem, 5vw, 3rem);
+    /* height: clamp(2.2rem, 5vw, 3rem); */
   }
 
   span {

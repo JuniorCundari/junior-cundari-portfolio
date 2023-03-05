@@ -1,3 +1,5 @@
+import { Animate } from '../../utils/Animate';
+
 import SocialMedia from '../SocialMedia';
 
 import github from '../../assets/images/svg/social/logo-github.svg';
@@ -10,45 +12,52 @@ import { Container } from './styles';
 export default function Home() {
   return (
     <Container id="anchor-home">
-      <h1>
-        buscar a melhor solução para o seu
-        {' '}
-        <span className="span-title">produto</span>
-        {' '}
-        é o que me motiva.
-      </h1>
+      <Animate.FadeIn>
 
-      <div>
-        <a href="https://api.whatsapp.com/send?phone=5511971906481">
-          Entre em contato!
-        </a>
-      </div>
+        <h1>
+          buscar a melhor solução para o seu
+          {' '}
+          <span className="span-title">produto</span>
+          {' '}
+          é o que me motiva.
+        </h1>
+      </Animate.FadeIn>
 
-      <ul>
-        <SocialMedia
-          icon={github}
-          href="https://github.com/JuniorCundari"
-          alt="Logo Github"
-        />
+      <Animate.FadeDown>
+        <div className="styled-button">
+          <a href="https://api.whatsapp.com/send?phone=5511971906481" target="_blank" rel="noreferrer">
+            Entre em contato!
+          </a>
+        </div>
+      </Animate.FadeDown>
 
-        <SocialMedia
-          icon={linkedin}
-          href="https://www.linkedin.com/in/juniorcundari/"
-          alt="Logo Linkedin"
-        />
+      <Animate.FadeUp>
+        <ul>
+          <SocialMedia
+            icon={github}
+            href="https://github.com/JuniorCundari"
+            alt="Logo Github"
+          />
 
-        <SocialMedia
-          icon={whatsapp}
-          href="https://api.whatsapp.com/send?phone=5511971906481"
-          alt="Logo Whatsapp"
-        />
+          <SocialMedia
+            icon={linkedin}
+            href="https://www.linkedin.com/in/juniorcundari/"
+            alt="Logo Linkedin"
+          />
 
-        <SocialMedia
-          icon={mail}
-          href="mailto:jrcundari@yahoo.com.br"
-          alt="Logo Email"
-        />
-      </ul>
+          <SocialMedia
+            icon={whatsapp}
+            href="https://api.whatsapp.com/send?phone=5511971906481"
+            alt="Logo Whatsapp"
+          />
+
+          <SocialMedia
+            icon={mail}
+            href="mailto:jrcundari@yahoo.com.br"
+            alt="Logo Email"
+          />
+        </ul>
+      </Animate.FadeUp>
     </Container>
   );
 }

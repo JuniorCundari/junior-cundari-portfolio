@@ -1,3 +1,7 @@
+import Marquee from 'react-fast-marquee';
+
+import { Animate } from '../../utils/Animate';
+
 import Language from '../Language';
 
 import { Container } from './styles';
@@ -15,15 +19,23 @@ import sass from '../../assets/images/svg/languages/logo-sass.svg';
 export default function About() {
   return (
     <Container id="anchor-about">
-      <div className="text-about">
-        <p>
-          Olá, seja bem-vindo(a), meu nome é José Roberto, mas pode me chamar de Junior Cundari 😀,
-          sou Desenvolvedor Front-end Júnior apaixonado por tecnologia e programação.
-        </p>
-      </div>
+      <Animate.FadeDown>
+        <div className="text-about">
+          <p>
+            Olá, seja bem-vindo(a), meu nome é José Roberto, mas pode me chamar de Junior Cundari 😀,
+            sou Desenvolvedor Front-end Júnior apaixonado por tecnologia e programação.
+          </p>
+        </div>
+      </Animate.FadeDown>
 
       <div className="languages-wrapper">
-        <div className="languages-box">
+        <Marquee
+          pauseOnHover
+          speed={100}
+          gradientColor={[14, 14, 20]}
+          gradientWidth={100}
+          direction="right"
+        >
           <Language
             icon={react}
             alt="logo react"
@@ -53,9 +65,8 @@ export default function About() {
             alt="logo javascript"
             name="JavaScript"
           />
-        </div>
-
-        <div className="languages-box">
+        </Marquee>
+        <Marquee pauseOnHover speed={90} gradientColor={[14, 14, 20]} gradientWidth={100}>
           <Language
             icon={node}
             alt="logo node"
@@ -79,7 +90,7 @@ export default function About() {
             alt="logo sass"
             name="Sass"
           />
-        </div>
+        </Marquee>
       </div>
     </Container>
   );

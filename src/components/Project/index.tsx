@@ -17,6 +17,8 @@ import bannerSocialTree2 from '../../assets/images/img/banner-social-tree-2.webp
 import logoGitHub2 from '../../assets/images/svg/social/logo-github2.svg';
 import openSite from '../../assets/images/svg/icons/open.svg';
 
+import { Animate } from '../../utils/Animate';
+
 import { Container } from './styles';
 
 const projects = [
@@ -90,50 +92,48 @@ export default function Project() {
         displacementImage: element.dataset.displacement,
       });
 
-      console.clear();
+      // console.clear();
     });
   }, []);
 
   return (
     <>
       {projects.map((project) => (
-        <Container
-          key={project.id}
-          projectWebSite={project.webSite ? '0' : '1'}
-        >
-          <div className="project-title">
-            <span className="project-number">{`${project.number}.`}</span>
-            <h3>{project.title}</h3>
-          </div>
+        <Animate.FadeIn key={project.id}>
+          <Container projectWebSite={project.webSite ? '0' : '1'}>
+            <div className="project-title">
+              <span className="project-number">{`${project.number}.`}</span>
+              <h3>{project.title}</h3>
+            </div>
 
-          <div
-            className="wrapper"
-            data-displacement={displacement}
-          >
-            <img
-              src={project.banner[1]}
-              alt={`Banner ${project.title}`}
-              className="banner"
-            />
-            <img
-              src={project.banner[2]}
-              alt={`Banner ${project.title}`}
-              className="banner"
-            />
-          </div>
-
-          <div className="project-footer">
-            <a
-              href={project.repository}
-              target="_blank"
-              rel="noreferrer"
+            <div
+              className="wrapper"
+              data-displacement={displacement}
             >
-              <img src={logoGitHub2} alt="Logo github" />
-            </a>
-            <span>
-              {project.languages}
-            </span>
-            {project.webSite && (
+              <img
+                src={project.banner[1]}
+                alt={`Banner ${project.title}`}
+                className="banner"
+              />
+              <img
+                src={project.banner[2]}
+                alt={`Banner ${project.title}`}
+                className="banner"
+              />
+            </div>
+
+            <div className="project-footer">
+              <a
+                href={project.repository}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={logoGitHub2} alt="Logo github" />
+              </a>
+              <span>
+                {project.languages}
+              </span>
+              {project.webSite && (
               <a
                 href={project.webSite}
                 target="_blank"
@@ -141,9 +141,10 @@ export default function Project() {
               >
                 <img src={openSite} alt="Ícone para abrir o site do projeto" />
               </a>
-            )}
-          </div>
-        </Container>
+              )}
+            </div>
+          </Container>
+        </Animate.FadeIn>
       ))}
     </>
   );

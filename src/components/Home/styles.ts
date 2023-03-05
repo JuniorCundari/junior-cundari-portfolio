@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
-import background from '../../assets/images/img/background.png';
-
 export const Container = styled.section`
-  height: 100vh;
   width: 100%;
-  margin-top: 20%;
-  background-image: url(${background});
+  padding-top: 20%;
 
   h1 {
     letter-spacing: -0.03em;
@@ -22,7 +18,7 @@ export const Container = styled.section`
     }
   }
 
-  div {
+  .styled-button {
     display: flex;
     align-items: center;
     justify-content: center;

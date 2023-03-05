@@ -8,7 +8,7 @@ export const Container = styled.div<{ projectWebSite: string}>`
 
   position: relative;
   margin-top: 8.8rem;
-  width: 80%;
+  width: 100%;
 
   background: linear-gradient(180deg, rgba(32, 31, 36, 0.69) 0%, rgba(48, 46, 55, 0) 100%);
   border: 2px solid ${({ theme }) => theme.colors.blue[800]};

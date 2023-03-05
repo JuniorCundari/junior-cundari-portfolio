@@ -7,7 +7,7 @@ export const Container = styled.section`
 
   position: relative;
 
-  margin-top: 11.2rem;
+  padding-top: 12rem;
 
   .projects-section-title {
     div {
@@ -20,10 +20,14 @@ export const Container = styled.section`
   }
 
   .wrapper-projects {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 
-    width: 100%;
+    width: 80%;
+
+    @media only screen and (max-width: 43em) {
+      width: 100%;
+    }
   }
 `;

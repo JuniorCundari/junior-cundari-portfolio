@@ -6,9 +6,11 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
 
-  padding-top: 10.2rem;
+  padding-top: 12rem;
 
   .text-about {
+    margin-bottom: 5.6rem;
+
     p {
       font-family: 'Alice';
     }
@@ -23,12 +25,5 @@ export const Container = styled.section`
 
     width: 100vw;
     margin-top: 5.6rem;
-
-    .languages-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3.2rem;
-    }
   }
 `;

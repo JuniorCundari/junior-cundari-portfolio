@@ -1,5 +1,6 @@
 import SocialMedia from '../SocialMedia';
 import Gradient from '../Gradient';
+
 import { MenuMobileProps } from '../MenuBurger';
 
 import github from '../../assets/images/svg/social/logo-github.svg';

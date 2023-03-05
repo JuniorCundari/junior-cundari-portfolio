@@ -5,7 +5,7 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  margin: 4.8rem auto 0 auto;
+  margin: 0 auto;
   max-width: 105.6rem;
   padding: 0 3.2rem;
 
@@ -15,6 +15,7 @@ export const Container = styled.header`
   width: 100%;
 
   .logo {
+    margin-top: 4.8rem;
     width: clamp(6.8rem, 5vw, 10.2rem);
   }
 `;

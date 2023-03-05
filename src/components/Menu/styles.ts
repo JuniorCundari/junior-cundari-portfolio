@@ -9,7 +9,7 @@ export const StyledMenu = styled.nav<{open: boolean}>`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
 
   background: ${({ theme }) => theme.colors.blue[800]};
 
@@ -32,6 +32,8 @@ export const StyledMenu = styled.nav<{open: boolean}>`
     flex-direction: column;
     gap: 3.2rem;
     width: 22%;
+
+    animation: ${({ open }) => (open ? 'scale-up-center 1s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both' : null)};
 
     .nav-social-list {
       display: flex;
@@ -67,6 +69,15 @@ export const StyledMenu = styled.nav<{open: boolean}>`
 
     @media only screen and (max-width: 56.25em) {
       width: 60%;
+    }
+
+    @keyframes scale-up-center {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
   }
 `;
