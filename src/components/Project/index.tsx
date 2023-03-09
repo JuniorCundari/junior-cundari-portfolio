@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import HoverEffect from 'hover-effect';
 
 import displacement from '../../assets/images/img/displacement.webp';
+import myContacts from '../../assets/images/img/banner-my-contacts.webp';
+import myContacts2 from '../../assets/images/img/banner-my-contacts-2.webp';
 import bannerEmpireBurger from '../../assets/images/img/banner-empire-burger.webp';
 import bannerEmpireBurger2 from '../../assets/images/img/banner-empire-burger-2.webp';
-import bannerNlwCopa from '../../assets/images/img/banner-nlw-copa.webp';
-import bannerNlwCopa2 from '../../assets/images/img/banner-nlw-copa2.webp';
 import bannerNlwEsports from '../../assets/images/img/banner-nlw-esports.webp';
 import bannerNlwEsports2 from '../../assets/images/img/banner-nlw-esports2.webp';
 import bannerRocketCard from '../../assets/images/img/banner-rocket-card.webp';
@@ -25,6 +25,17 @@ const projects = [
   {
     id: 1,
     number: '01',
+    title: 'My Contacts',
+    languages: 'NodeJS, ReactJS, Styled Components',
+    repository: 'https://github.com/JuniorCundari/jstack-mycontacts',
+    banner: {
+      1: myContacts,
+      2: myContacts2,
+    },
+  },
+  {
+    id: 2,
+    number: '01',
     title: 'Empire Burger',
     languages: 'TypeScript, ReactJS, Styled Components',
     repository: 'https://github.com/JuniorCundari/br-challenges-empire-burger',
@@ -35,20 +46,11 @@ const projects = [
     },
   },
   {
-    id: 2,
-    number: '02',
-    title: 'NLW Copa',
-    languages: 'TypeScript, ReactJS, NodeJS',
-    banner: {
-      1: bannerNlwCopa,
-      2: bannerNlwCopa2,
-    },
-  },
-  {
     id: 3,
     number: '03',
     title: 'NLW eSports',
     languages: 'TypeScript, ReactJS, NodeJS',
+    repository: 'https://github.com/JuniorCundari/nlw-esports-ignite',
     banner: {
       1: bannerNlwEsports,
       2: bannerNlwEsports2,
@@ -92,7 +94,7 @@ export default function Project() {
         displacementImage: element.dataset.displacement,
       });
 
-      // console.clear();
+      console.clear();
     });
   }, []);
 

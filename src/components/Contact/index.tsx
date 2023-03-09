@@ -16,15 +16,18 @@ export default function Contact() {
       <Animate.FadeLeft>
         <Gradient>
           <h2>
-            Gostou do meu trabalho?
-          </h2>
-          <h2>
-            Ou acha que posso fazer parte da sua equipe?
+            O que você achou do meu trabalho? Você está considerando adicionar alguém à sua equipe?
           </h2>
         </Gradient>
         <p>
-          Envie um e-mail para jrcundari@yahoo.com.br ou me chame no whatsapp,
-          ficarei muito feliz com seu contato! 😀
+          Não perca a chance de ter um profissional dedicado e altamente competente em sua equipe.
+          Com minha experiência em HTML5, CSS3,
+          JavaScript e ReactJS, posso agregar um valor significativo ao seu negócio.
+        </p>
+        <p>
+          Vamos conversar sobre como podemos trabalhar juntos de forma produtiva?
+          Envie um e-mail para (jrcundari@yahoo.com.br) ou entre em contato através do LinkedIn
+          agora mesmo e vamos fazer acontecer! 😀
         </p>
       </Animate.FadeLeft>
 
@@ -46,13 +49,6 @@ export default function Contact() {
               icon={linkedin}
               href="https://www.linkedin.com/in/juniorcundari/"
               alt="Logo Linkedin"
-              colorSvg
-            />
-
-            <SocialMedia
-              icon={whatsapp}
-              href="https://api.whatsapp.com/send?phone=5511971906481"
-              alt="Logo Whatsapp"
               colorSvg
             />
 

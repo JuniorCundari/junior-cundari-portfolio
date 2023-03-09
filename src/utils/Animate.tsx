@@ -33,7 +33,7 @@ function AnimateIn({ from, to, children }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const onScreen = useElementOnScreen(ref);
   const defaultStyles: CSSProperties = {
-    transition: '600ms ease-in-out',
+    transition: '300ms ease-in-out',
   };
   return (
     <div

@@ -3,6 +3,18 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 100%;
   padding-top: 20%;
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: -25rem;
+    top: 75%;
+    transform: translate(0%, -50%);
+
+    @media only screen and (max-width: 29.375em) {
+      display: none;
+    }
+  }
 
   h1 {
     letter-spacing: -0.03em;
