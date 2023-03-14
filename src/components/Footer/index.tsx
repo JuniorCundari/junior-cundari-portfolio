@@ -27,6 +27,12 @@ export default function Footer() {
         />
 
         <SocialMedia
+          icon={whatsapp}
+          href="https://api.whatsapp.com/send?phone=5511971906481"
+          alt="Logo Whatsapp"
+        />
+
+        <SocialMedia
           icon={mail}
           href="mailto:jrcundari@yahoo.com.br"
           alt="Logo Email"
