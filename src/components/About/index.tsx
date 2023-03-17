@@ -23,7 +23,8 @@ export default function About() {
         <div className="text-about">
           <p>
             Olá, seja bem-vindo(a), meu nome é José Roberto, mas pode me chamar de Junior Cundari 😀,
-            sou Desenvolvedor Front-end Júnior apaixonado por tecnologia e programação.
+            sou Desenvolvedor Front-end apaixonado por tecnologia e programação,
+            focado em entregar a melhor solução para o seu produto.
           </p>
         </div>
       </Animate.FadeDown>
